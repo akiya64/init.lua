@@ -1,17 +1,20 @@
-require('colemak')
--- keymap / leader
---
 require('options')
 
+require('colemak')
+require('keymap')
+
 require('plugins')
+
 require('lsp')
 require('status_line')
+
 -- filer
--- session
 -- git command
+
+-- functions
+--  quargs
+--  session
 
 vim.cmd [[
 colorscheme soifon
 ]]
-
-vim.keymap.set('n', 'W', '<C-Left>')

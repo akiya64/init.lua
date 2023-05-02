@@ -19,6 +19,8 @@ local options = {
 
 	background = 'light',
 	pumblend = 15,
+
+	guifont = 'Monofur Nerd Font Mono'
 }
 
 for k, v in pairs(options) do

@@ -1,12 +1,14 @@
 require('lualine').setup{
 	options = {
 		theme = 'onelight',
-		icons_enabled = false,
-		section_separators = {left = '', right=''}
+		section_separators = { left='', right = '' },
+		component_separators = { left = '│', right = '│' }
 	},
 	sections = {
-		lualine_c = {  {'filename', path = 1, icon='', icons_enabled = false }},
-		lualine_x = { 'diagnostics' }
+		lualine_b = { {'branch', icon = ''} },
+		lualine_c = { {'filename', path = 1 } },
+		lualine_x = {},
+		lualine_y = { 'filetype' },
+		lualine_z = { 'location', 'progress' },
 	},
 }
-

@@ -8,12 +8,13 @@ require('plugins')
 require('lsp')
 require('status_line')
 
+require('session_wrapper')
+
 -- filer
 -- git command
 
 -- functions
 --  quargs
---  session
 
 vim.cmd [[
 colorscheme soifon

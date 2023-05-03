@@ -1,6 +1,9 @@
 vim.cmd [[packadd packer.nvim]]
 
 require('packer').startup(function()
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-telescope/telescope.nvim'
 
   use 'Shougo/defx.nvim'
   use 'Shougo/denite.nvim'
@@ -29,9 +32,6 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-cmdline'
   use 'uga-rosa/cmp-dictionary'
-
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-lua/popup.nvim'
 
   use { 'wbthomason/packer.nvim', opt = true}
 end)

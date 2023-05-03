@@ -6,6 +6,8 @@ require('keymap')
 require('plugins')
 
 require('lsp')
+require('linter')
+
 require('status_line')
 
 require('session_wrapper')

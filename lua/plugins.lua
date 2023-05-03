@@ -18,10 +18,15 @@ require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
 
   use 'Editorconfig/editorconfig-vim'
+
   use {
 		'windwp/nvim-autopairs',
-		config = function() require("nvim-autopairs").setup {} end
+		config = function() require('nvim-autopairs').setup {} end
 }
+  -- formatter
+  use 'wesleimp/stylua.nvim'
+  -- lint
+  use 'mfussenegger/nvim-lint'
 
   -- lsp
   use 'neovim/nvim-lspconfig'

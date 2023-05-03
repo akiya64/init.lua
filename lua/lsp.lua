@@ -46,7 +46,7 @@ cmp.setup({
 	sources = {
 		{ name = 'nvim_lsp' },
 		{ name = 'buffer' },
-		-- { name = "path" },
+		{ name = 'path' },
 	},
 	mapping = cmp.mapping.preset.insert({
 		['<C-p>'] = cmp.mapping.select_prev_item(),
@@ -66,6 +66,8 @@ cmp.setup.cmdline('/', {
 		{ name = 'buffer' },
 	},
 })
+
+--[[
 cmp.setup.cmdline(':', {
 	mapping = cmp.mapping.preset.cmdline(),
 	sources = cmp.config.sources({
@@ -79,3 +81,4 @@ cmp.setup.cmdline(':', {
 		},
 	}),
 })
+--]]

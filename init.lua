@@ -6,7 +6,7 @@ require('keymap')
 require('plugins')
 
 require('lsp')
-require('linter')
+require("linter")
 
 require('status_line')
 

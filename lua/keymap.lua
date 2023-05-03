@@ -4,7 +4,7 @@ vim.keymap.set('n', '<C-p>', ':tabprevious<CR>')
 vim.keymap.set('n', '<C-n>', ':tabnext<CR>')
 
 -- lsp
-vim.keymap.set('n', 'K',  '<cmd>lua vim.lsp.buf.hover()<CR>')
+vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>')
 vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
@@ -22,9 +22,9 @@ vim.keymap.set('n', 'x', '"_x')
 vim.keymap.set('n', 'X', '"_X')
 
 -- terminal
-vim.api.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>', {silent=true})
+vim.api.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>', { silent = true })
 
 -- leader
 vim.g.mapleader = ' '
-vim.keymap.set('n', '<leader>so', ":source ~/AppDataLocal/nvim/init.lua<CR>")
-vim.keymap.set('n', '<leader>ei', ":e ~/AppData/Local/nvim/init.lua<CR>")
+vim.keymap.set('n', '<leader>so', ':source %<CR>')
+vim.keymap.set('n', '<leader>ei', ':e ~/AppData/Local/nvim/init.lua<CR>')

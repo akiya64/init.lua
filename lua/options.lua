@@ -5,14 +5,14 @@ local options = {
 	tabstop = 4,
 	shiftwidth = 4,
 	softtabstop = 4,
-	clipboard = "unnamedplus",
+	clipboard = 'unnamedplus',
 	autoindent = true,
 	smartindent = true,
 
 	splitright = true,
 	splitbelow = true,
 
-	listchars={ tab='» ', trail='¬', extends='»', precedes='«', nbsp='%'},
+	listchars = { tab = '» ', trail = '¬', extends = '»', precedes = '«', nbsp = '%' },
 	list = true,
 
 	number = true,
@@ -20,7 +20,7 @@ local options = {
 	background = 'light',
 	pumblend = 15,
 
-	guifont = 'Monofur Nerd Font Mono'
+	guifont = 'Monofur Nerd Font Mono',
 }
 
 for k, v in pairs(options) do

@@ -28,3 +28,4 @@ vim.api.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>', { silent = true })
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>so', ':source %<CR>')
 vim.keymap.set('n', '<leader>ei', ':e ~/AppData/Local/nvim/init.lua<CR>')
+vim.keymap.set('n', '<leader>cd', ':cd %:h<CR>')

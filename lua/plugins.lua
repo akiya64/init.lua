@@ -7,6 +7,9 @@ require('packer').startup(function()
 
 	use('nvim-lualine/lualine.nvim')
 
+	use('obaland/vfiler.vim')
+	use('obaland/vfiler-column-devicons')
+
 	use('akiya64/soifon')
 
 	use('nvim-tree/nvim-web-devicons')

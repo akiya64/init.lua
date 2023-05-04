@@ -7,12 +7,12 @@ require('plugins')
 
 require('lsp')
 require('linter')
+require('filer')
 
 require('status_line')
 
 require('session_wrapper')
 
--- filer
 -- git command
 
 -- functions

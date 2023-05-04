@@ -21,3 +21,8 @@ require('session_wrapper')
 vim.cmd([[
 colorscheme soifon
 ]])
+
+vim.api.nvim_create_autocmd('QuickFixCmdPost',{
+	pattern = '*grep*',
+	command = 'cwindow'
+})

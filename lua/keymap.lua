@@ -29,3 +29,5 @@ vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>so', ':source %<CR>')
 vim.keymap.set('n', '<leader>ei', ':e ~/AppData/Local/nvim/init.lua<CR>')
 vim.keymap.set('n', '<leader>cd', ':cd %:h<CR>')
+vim.keymap.set('n', '<leader>fi', '<cmd>VFiler -auto-cd -layout=floating<CR>')
+vim.keymap.set('n', '<leader>tr', '<cmd>VFiler -auto-cd -layout=left -keep<CR>')

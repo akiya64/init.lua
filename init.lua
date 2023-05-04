@@ -1,16 +1,16 @@
-require("options")
+require('options')
 
-require("colemak")
-require("keymap")
+require('colemak')
+require('keymap')
 
-require("plugins")
+require('plugins')
 
-require("lsp")
-require("linter")
+require('lsp')
+require('linter')
 
-require("status_line")
+require('status_line')
 
-require("session_wrapper")
+require('session_wrapper')
 
 -- filer
 -- git command

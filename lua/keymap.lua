@@ -3,6 +3,13 @@ vim.keymap.set('n', '<C-s>', ':w<CR>')
 vim.keymap.set('n', '<C-p>', ':tabprevious<CR>')
 vim.keymap.set('n', '<C-n>', ':tabnext<CR>')
 
+-- register 'x' does not yank
+vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set('n', 'X', '"_X')
+
+-- terminal
+vim.api.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>', { silent = true })
+
 -- lsp
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>')
@@ -17,17 +24,21 @@ vim.keymap.set('n', 'ge', '<cmd>lua vim.diagnostic.open_float()<CR>')
 vim.keymap.set('n', 'g]', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 vim.keymap.set('n', 'g[', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
 
--- register 'x' does not yank
-vim.keymap.set('n', 'x', '"_x')
-vim.keymap.set('n', 'X', '"_X')
-
--- terminal
-vim.api.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>', { silent = true })
+local cmp = require('cmp')
+cmp.setup({
+	mapping = cmp.mapping.preset.insert({
+		['<C-p>'] = cmp.mapping.select_prev_item(),
+		['<C-n>'] = cmp.mapping.select_next_item(),
+		['<C-l>'] = cmp.mapping.complete(),
+		['<C-e>'] = cmp.mapping.abort(),
+		['<CR>'] = cmp.mapping.confirm({ select = true }),
+	}),
+})
 
 -- leader
 vim.g.mapleader = ' '
-vim.keymap.set('n', '<leader>so', ':source %<CR>')
-vim.keymap.set('n', '<leader>ei', ':e ~/AppData/Local/nvim/init.lua<CR>')
-vim.keymap.set('n', '<leader>cd', ':cd %:h<CR>')
-vim.keymap.set('n', '<leader>fi', '<cmd>VFiler -auto-cd -layout=floating<CR>')
-vim.keymap.set('n', '<leader>tr', '<cmd>VFiler -auto-cd -layout=left -keep<CR>')
+vim.keymap.set('n', '<leader>so', '<cmd>source %<CR>')
+vim.keymap.set('n', '<leader>ei', '<cmd>e ~/AppData/Local/nvim/init.lua<CR>')
+vim.keymap.set('n', '<leader>cd', '<cmd>cd %:h<CR>pwd<CR>')
+vim.keymap.set('n', '<leader>ff', '<cmd>VFiler -auto-cd -layout=floating<CR>')
+vim.keymap.set('n', '<leader>fi', '<cmd>VFiler -auto-cd -layout=left -keep<CR>')

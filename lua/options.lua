@@ -20,6 +20,8 @@ local options = {
 	background = 'light',
 	pumblend = 15,
 
+	autochdir = true,
+
 	guifont = 'Monofur Nerd Font Mono',
 }
 

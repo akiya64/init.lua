@@ -11,6 +11,8 @@ require('packer').startup(function()
 	use('obaland/vfiler-column-devicons')
 
 	use('akiya64/soifon')
+	use('machakann/vim-colorscheme-snowtrek')
+	use('navarasu/onedark.nvim')
 
 	use('nvim-tree/nvim-web-devicons')
 	use('nvim-treesitter/nvim-treesitter')

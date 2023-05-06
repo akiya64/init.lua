@@ -1,12 +1,10 @@
 require('options')
+require('plugins')
 
 require('colemak')
 require('keymap')
 
-require('plugins')
-
 require('lsp')
-require('linter')
 require('filer')
 
 require('status_line')

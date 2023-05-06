@@ -10,6 +10,7 @@ require('filer')
 require('status_line')
 
 require('session_wrapper')
+require('tree_sitter')
 
 -- git command
 

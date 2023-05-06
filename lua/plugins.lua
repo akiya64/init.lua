@@ -13,6 +13,7 @@ require('packer').startup(function()
 	use('akiya64/soifon')
 
 	use('nvim-tree/nvim-web-devicons')
+	use('nvim-treesitter/nvim-treesitter')
 	use({
 		'lewis6991/gitsigns.nvim',
 		config = function()

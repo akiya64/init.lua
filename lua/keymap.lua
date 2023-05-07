@@ -27,6 +27,7 @@ vim.keymap.set('n', 'g[', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
 local cmp = require('cmp')
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
+		['<S-SPACE>'] = cmp.mapping.preset(),
 		['<C-p>'] = cmp.mapping.select_prev_item(),
 		['<C-n>'] = cmp.mapping.select_next_item(),
 		['<C-l>'] = cmp.mapping.complete(),

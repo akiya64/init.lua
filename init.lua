@@ -31,3 +31,19 @@ require("indent_blankline").setup {
 	show_current_context = true,
 	char_highlight_list = { "IndentBlanklineIndent" },
 }
+vim.api.nvim_create_user_command('ShowRootHighlightUnderCursor', function()
+	local function findRoot(id, tree)
+		local transId = vim.fn.synIDtrans(id)
+		local name = vim.fn.synIDattr(id, 'name')
+		table.insert(tree, name)
+
+		if id == transId then
+			print(table.concat(tree, ' -> '))
+		else
+			findRoot(transId, tree)
+		end
+	end
+
+	local id = vim.fn.synID(vim.fn.line("."), vim.fn.col("."), 0)
+	findRoot(id, {})
+end, {})

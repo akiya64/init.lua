@@ -36,7 +36,14 @@ cmp.setup({
 	}),
 })
 
--- leader
+-- vfiler
+local action = require('vfiler/action')
+require 'vfiler/config'.setup {
+	mappings = {
+		['i'] = action.open_tree,
+		['o'] = action.open,
+	}
+}
 vim.g.mapleader = ' '
 vim.keymap.set('n', '<leader>so', '<cmd>source %<CR>')
 vim.keymap.set('n', '<leader>ei', '<cmd>e ~/AppData/Local/nvim/init.lua<CR>')

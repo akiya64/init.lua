@@ -6,8 +6,4 @@ require 'vfiler/config'.setup {
 		auto_cd = true,
 		width = 30
 	},
-
-	mappings = {
-		['i'] = action.open_tree,
-	}
 }

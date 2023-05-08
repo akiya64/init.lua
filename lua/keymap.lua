@@ -11,7 +11,7 @@ vim.keymap.set('n', 'X', '"_X')
 vim.api.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>', { silent = true })
 
 -- lsp
-vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+-- vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>')
 vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
@@ -27,7 +27,6 @@ vim.keymap.set('n', 'g[', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
 local cmp = require('cmp')
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
-		['<S-SPACE>'] = cmp.mapping.preset(),
 		['<C-p>'] = cmp.mapping.select_prev_item(),
 		['<C-n>'] = cmp.mapping.select_next_item(),
 		['<C-l>'] = cmp.mapping.complete(),
@@ -44,9 +43,13 @@ require 'vfiler/config'.setup {
 		['o'] = action.open,
 	}
 }
+
 vim.g.mapleader = ' '
+
+-- leader shortcut
 vim.keymap.set('n', '<leader>so', '<cmd>source %<CR>')
 vim.keymap.set('n', '<leader>ei', '<cmd>e ~/AppData/Local/nvim/init.lua<CR>')
-vim.keymap.set('n', '<leader>cd', '<cmd>cd %:h<CR>pwd<CR>')
+vim.keymap.set('n', '<leader>cd', '<cmd>ch %:h<CR>pwd<CR>')
 vim.keymap.set('n', '<leader>ff', '<cmd>VFiler -auto-cd -layout=floating<CR>')
-vim.keymap.set('n', '<leader>fi', '<cmd>VFiler -auto-cd -layout=left -keep<CR>')
+vim.keymap.set('n', '<leader>fi', '<cmd>VFiler<CR>')
+vim.keymap.set('n', '<leader>fe', '<cmd>VFiler -auto-cd -layout=left<CR>')

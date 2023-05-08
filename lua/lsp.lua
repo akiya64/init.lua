@@ -37,6 +37,7 @@ augroup END
 --
 -- 3. completion (hrsh7th/nvim-cmp)
 local cmp = require('cmp')
+local lspkind = require('lspkind')
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -48,6 +49,25 @@ cmp.setup({
 		{ name = 'buffer' },
 		{ name = 'path' },
 		{ name = 'dictionary' },
+	},
+	completion = {
+		keyword_length = 1,
+	},
+	window = {
+		-- completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
+
+	formatting = {
+		format = lspkind.cmp_format {
+			mode = 'symbol_text',
+			menu = ({
+				buffer = "[Buffer]",
+				nvim_lsp = "[LSP]",
+				dictionary = "[Dict]",
+				path = "[Path]"
+			})
+		},
 	},
 	experimental = {
 		ghost_text = true,

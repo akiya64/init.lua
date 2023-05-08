@@ -52,6 +52,7 @@ require('packer').startup(function()
 	use('hrsh7th/cmp-buffer')
 	use('hrsh7th/cmp-cmdline')
 	use('uga-rosa/cmp-dictionary')
+    use('onsails/lspkind.nvim')
 
 	use({ 'wbthomason/packer.nvim', opt = true })
 end)

@@ -11,7 +11,6 @@ require 'nvim-treesitter.configs'.setup {
 	'typescript',
     'tsx',
     'toml',
-    'php',
     'json',
     'yaml',
     'css',

@@ -5,7 +5,7 @@ require('lualine').setup({
 		component_separators = { left = '│', right = '│' },
 	},
 	sections = {
-		lualine_b = { { 'branch', icon = '' } },
+		lualine_b = { { 'branch', icon = '' } },
 		lualine_c = { { 'filename', path = 1 } },
 		lualine_x = {},
 		lualine_y = { 'filetype' },

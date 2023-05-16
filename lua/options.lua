@@ -12,7 +12,7 @@ local options = {
 	splitright = true,
 	splitbelow = true,
 
-	listchars = { tab = '» ', trail = '¬', extends = '»', precedes = '«', nbsp = '%' },
+	listchars = { tab = '> ', trail = '¬', extends = '»', precedes = '«', nbsp = '%' },
 	list = true,
 
 	number = true,
@@ -21,8 +21,6 @@ local options = {
 	pumblend = 15,
 
 	autochdir = true,
-
-	guifont = 'Monofur Nerd Font Mono',
 }
 
 for k, v in pairs(options) do

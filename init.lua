@@ -45,11 +45,17 @@ require "nvim-treesitter.configs".setup {
       show_help = '?',
     },
   }
+
 }
 -- functions
 vim.api.nvim_create_autocmd('QuickFixCmdPost',{
 	pattern = '*grep*',
 	command = 'cwindow'
+})
+
+vim.api.nvim_create_autocmd('BufEnter',{
+	pattern = '*.php',
+	command = 'set syn=wordpress'
 })
 
 vim.api.nvim_create_user_command('ShowRootHighlightUnderCursor', function()

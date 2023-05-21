@@ -26,6 +26,8 @@ require('packer').startup(function()
 	use('nvim-treesitter/nvim-treesitter')
 	use('nvim-treesitter/playground')
 
+	use('kloppster/Wordpress-Vim-Syntax')
+
 	-- filer
 	use('obaland/vfiler.vim')
 	use('obaland/vfiler-column-devicons')

@@ -96,3 +96,32 @@ cmp.setup.cmdline(':', {
 	}),
 })
 --]]
+
+
+--[[
+  ref:https://daniele.tech/2021/07/neovim-lsp-with-intelephense-for-php-and-wordpress-and-others/
+  require install intelephense
+  `npm install -g intelephense`
+  and require install stubs
+  `composer global require php-stubs/wordpress-globals php-stubs/wordpress-stubs php-stubs/acf-pro-stubs wpsyntex/polylang-stubs php-stubs/wp-cli-stubs`
+--]]
+
+local nvim_lsp = require'lspconfig'
+nvim_lsp.intelephense.setup({
+	settings = {
+		intelephense = {
+			stubs = {
+				"bcmath",
+				"calendar",
+				"Core",
+				"fileinfo",
+				"mbstring",
+				"wordpress",
+				"acf-pro",
+				"wordpress-globals",
+				"wp-cli",
+				"polylang"
+			},
+		};
+	}
+});

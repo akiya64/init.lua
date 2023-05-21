@@ -1,6 +1,6 @@
 vim.cmd([[packadd packer.nvim]])
 
-require('packer').startup(function()
+require('packer').startup(function(use, use_rock)
 	-- common
 	use('nvim-lua/plenary.nvim')
 	use('nvim-lua/popup.nvim')
@@ -61,4 +61,8 @@ require('packer').startup(function()
 	})
 
 	use({ 'wbthomason/packer.nvim', opt = true })
+
+	use_rock{
+		'winapi'
+	}
 end)

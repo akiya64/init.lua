@@ -20,8 +20,6 @@ require('packer').startup(function(use, use_rock)
 
 	-- highlight
 	use('akiya64/soifon')
-	use('machakann/vim-colorscheme-snowtrek')
-	use('navarasu/onedark.nvim')
 
 	use('nvim-treesitter/nvim-treesitter')
 	use('nvim-treesitter/playground')

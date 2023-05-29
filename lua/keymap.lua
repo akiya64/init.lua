@@ -11,7 +11,7 @@ vim.keymap.set('n', 'X', '"_X')
 vim.api.nvim_set_keymap('t', '<ESC>', '<C-\\><C-n>', { silent = true })
 
 -- lsp
--- vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+ vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', 'gf', '<cmd>lua vim.lsp.buf.formatting()<CR>')
 vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')

@@ -4,6 +4,7 @@ require('plugins')
 require('colemak')
 require('keymap')
 
+require('linter')
 require('lsp')
 require('filer')
 

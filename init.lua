@@ -26,6 +26,11 @@ vim.api.nvim_create_autocmd('BufEnter',{
 	command = 'set syn=wordpress'
 })
 
+vim.api.nvim_create_autocmd('BufEnter',{
+	pattern = 'vfiler',
+	command = 'set noswapfile'
+})
+
 vim.api.nvim_create_user_command('ShowRootHighlightUnderCursor', function()
 	local function findRoot(id, tree)
 		local transId = vim.fn.synIDtrans(id)

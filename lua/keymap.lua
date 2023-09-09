@@ -49,7 +49,7 @@ vim.g.mapleader = ' '
 -- leader shortcut
 vim.keymap.set('n', '<leader>so', '<cmd>source %<CR>')
 vim.keymap.set('n', '<leader>ei', '<cmd>e ~/AppData/Local/nvim/init.lua<CR>')
-vim.keymap.set('n', '<leader>cd', '<cmd>ch %:h<CR>pwd<CR>')
-vim.keymap.set('n', '<leader>ff', '<cmd>VFiler -auto-cd -layout=floating<CR>')
+vim.keymap.set('n', '<leader>cp', '<cmd>cd %:h<CR>pwd<CR>')
+vim.keymap.set('n', '<leader>ff', '<cmd>VFiler -layout=floating<CR>')
 vim.keymap.set('n', '<leader>fi', '<cmd>VFiler<CR>')
-vim.keymap.set('n', '<leader>fe', '<cmd>VFiler -auto-cd -layout=left -keep<CR>')
+vim.keymap.set('n', '<leader>fe', '<cmd>VFiler -layout=left -keep<CR>')

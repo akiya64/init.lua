@@ -3,8 +3,8 @@
 -- e <-> k
 vim.keymap.set('', 'E', 'K')
 vim.keymap.set('', 'e', 'gk')
-vim.keymap.set('', 'k', 'N')
-vim.keymap.set('', 'K', 'n')
+vim.keymap.set('', 'k', 'n')
+vim.keymap.set('', 'K', 'N')
 vim.keymap.set('n', '<C-w>n', '<C-w>j')
 vim.keymap.set('n', '<C-w>e', '<C-w>k')
 

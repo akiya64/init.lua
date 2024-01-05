@@ -4,10 +4,8 @@ colorscheme soifon
 
 vim.cmd [[highlight IndentBlanklineIndent guifg=#c0c0c0 gui=nocombine ]]
 vim.cmd [[highlight IndentBlanklineContextchar guifg=#909090 gui=nocombine ]]
-require("indent_blankline").setup {
-	show_current_context = true,
-	char_highlight_list = { "IndentBlanklineIndent" },
-}
+
+require("ibl").setup()
 
 require "nvim-treesitter.configs".setup {
   playground = {

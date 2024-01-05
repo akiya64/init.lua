@@ -2,6 +2,8 @@ local options = {
 	encoding = 'utf-8',
 	fileencoding = 'utf-8',
 
+	guifont = 'Monofur NF IBM Plex:h14',
+
 	tabstop = 4,
 	shiftwidth = 4,
 	softtabstop = 4,

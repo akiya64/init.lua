@@ -1,66 +1,71 @@
-vim.cmd([[packadd packer.nvim]])
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-require('packer').startup(function(use, use_rock)
+require('lazy').setup({
 	-- common
-	use('nvim-lua/plenary.nvim')
-	use('nvim-lua/popup.nvim')
-	use('nvim-telescope/telescope.nvim')
-	use('Editorconfig/editorconfig-vim')
+	'nvim-lua/plenary.nvim',
+	'nvim-lua/popup.nvim',
+	'nvim-telescope/telescope.nvim',
+	'Editorconfig/editorconfig-vim',
 
-	-- appearance
-	use('lukas-reineke/indent-blankline.nvim')
-	use('nvim-lualine/lualine.nvim')
-	use('nvim-tree/nvim-web-devicons')
-	use({
-		'lewis6991/gitsigns.nvim',
+	-- appearanc
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+	'lukas-reineke/indent-blankline.nvim',
+	'nvim-lualine/lualine.nvim',
+	'nvim-tree/nvim-web-devicons',
+	{'lewis6991/gitsigns.nvim',
 		config = function()
 			require('gitsigns').setup()
-		end,
-	})
+		end
+	},
 
 	-- highlight
-	use('akiya64/soifon')
+	'akiya64/soifon',
 
-	use('nvim-treesitter/nvim-treesitter')
-	use('nvim-treesitter/playground')
+	'nvim-treesitter/nvim-treesitter',
+	'nvim-treesitter/playground',
 
-	use('kloppster/Wordpress-Vim-Syntax')
+	'kloppster/Wordpress-Vim-Syntax',
 
 	-- filer
-	use('obaland/vfiler.vim')
-	use('obaland/vfiler-column-devicons')
+	'obaland/vfiler.vim',
+	'obaland/vfiler-column-devicons',
 
 	-- formatter
-	use('wesleimp/stylua.nvim')
+	'wesleimp/stylua.nvim',
 
 	-- lint
-	use('mfussenegger/nvim-lint')
+	'mfussenegger/nvim-lint',
 
 	-- lsp
-	use('neovim/nvim-lspconfig')
-	use('williamboman/mason.nvim')
-	use('williamboman/mason-lspconfig.nvim')
+	'neovim/nvim-lspconfig',
+	'williamboman/mason.nvim',
+	'williamboman/mason-lspconfig.nvim',
 
 	-- completion
-	use('hrsh7th/nvim-cmp')
-	use('hrsh7th/cmp-nvim-lsp')
-	use('hrsh7th/vim-vsnip')
-	use('hrsh7th/cmp-path')
-	use('hrsh7th/cmp-buffer')
-	use('hrsh7th/cmp-cmdline')
-	use('uga-rosa/cmp-dictionary')
-    use('onsails/lspkind.nvim')
+	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-nvim-lsp',
+	'hrsh7th/vim-vsnip',
+	'hrsh7th/cmp-path',
+	'hrsh7th/cmp-buffer',
+	'hrsh7th/cmp-cmdline',
+	'uga-rosa/cmp-dictionary',
+	'onsails/lspkind.nvim',
 
-	use({
+	{
 		'windwp/nvim-autopairs',
 		config = function()
 			require('nvim-autopairs').setup()
 		end,
-	})
-
-	use({ 'wbthomason/packer.nvim', opt = true })
-
-	use_rock{
-		'winapi'
-	}
-end)
+	},
+})

@@ -8,7 +8,7 @@ require 'nvim-treesitter.configs'.setup {
     disable = {},
   },
   ensure_installed = {
-	'typescript',
+    'typescript',
     'tsx',
     'toml',
     'json',

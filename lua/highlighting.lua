@@ -2,10 +2,13 @@ vim.cmd([[
 colorscheme soifon
 ]])
 
-vim.cmd [[highlight IndentBlanklineIndent guifg=#c0c0c0 gui=nocombine ]]
+vim.cmd [[highlight IndentBlanklineIndent guifg=#c0c0c0 gui=nocombine gui=NONE ]]
 vim.cmd [[highlight IndentBlanklineContextchar guifg=#909090 gui=nocombine ]]
+vim.cmd [[highlight NonText gui=NONE ]]
 
-require("ibl").setup()
+require("ibl").setup({
+	indent = { char = '▏' }
+})
 
 require "nvim-treesitter.configs".setup {
   playground = {

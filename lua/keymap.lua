@@ -40,6 +40,7 @@ local action = require('vfiler/action')
 require 'vfiler/config'.setup {
 	mappings = {
 		['i'] = action.open_tree,
+		[' '] = action.open_tree,
 		['o'] = action.open,
 	}
 }
@@ -51,5 +52,5 @@ vim.keymap.set('n', '<leader>so', '<cmd>source %<CR>')
 vim.keymap.set('n', '<leader>ei', '<cmd>e ~/AppData/Local/nvim/init.lua<CR>')
 vim.keymap.set('n', '<leader>cp', '<cmd>cd %:h<CR>pwd<CR>')
 vim.keymap.set('n', '<leader>ff', '<cmd>VFiler -layout=floating<CR>')
-vim.keymap.set('n', '<leader>fi', '<cmd>VFiler<CR>')
-vim.keymap.set('n', '<leader>fe', '<cmd>VFiler -layout=left -keep<CR>')
+vim.keymap.set('n', '<leader>fe', '<cmd>VFiler<CR>')
+vim.keymap.set('n', '<leader>fi', '<cmd>VFiler -layout=left -keep<CR>')

@@ -23,6 +23,10 @@ local options = {
 	pumblend = 15,
 
 	autochdir = true,
+
+	shell = vim.fn.expand('$HOME/scoop/apps/git/current/bin/bash.exe'),
+	shellcmdflag = '-c',
+	shellquote=''
 }
 
 for k, v in pairs(options) do

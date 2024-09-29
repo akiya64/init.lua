@@ -8,6 +8,8 @@ require 'nvim-treesitter.configs'.setup {
     disable = {},
   },
   ensure_installed = {
+    'php',
+    'php_only',
     'typescript',
     'tsx',
     'toml',

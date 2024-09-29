@@ -18,11 +18,10 @@ require('lazy').setup({
 	'nvim-telescope/telescope.nvim',
 	'Editorconfig/editorconfig-vim',
 
-	-- appearanc
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-	'lukas-reineke/indent-blankline.nvim',
+	-- appearance
 	'nvim-lualine/lualine.nvim',
 	'nvim-tree/nvim-web-devicons',
+
 	{'lewis6991/gitsigns.nvim',
 		config = function()
 			require('gitsigns').setup()

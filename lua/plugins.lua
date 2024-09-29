@@ -67,4 +67,6 @@ require('lazy').setup({
 			require('nvim-autopairs').setup()
 		end,
 	},
+
+	'lilydjwg/colorizer',
 })

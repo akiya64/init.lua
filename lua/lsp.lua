@@ -1,15 +1,5 @@
 -- LSP Sever management
 require('mason').setup()
-require('mason-lspconfig').setup_handlers({
-	function(server)
-		local opt = {
-			-- -- Function executed when the LSP server startup
-
-			capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
-		}
-		require('lspconfig')[server].setup(opt)
-	end,
-})
 
 -- Reference highlight
 vim.cmd([[
@@ -64,38 +54,16 @@ cmp.setup({
 	},
 })
 
---[[
-cmp.setup.cmdline('/', {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = {
-		{ name = 'buffer' },
-	},
+-- astro --
+local lspconfig = require('lspconfig')
+lspconfig.astro.setup({
+  filetypes = { 'astro', 'typescript' },
+  init_options = {
+    typescript = {
+      tsdk = vim.fs.normalize('~/AppData/Local/nvim-data/mason/packages/typescript-language-server/node_modules/typescript/lib/')
+    }
+  }
 })
-
-cmp.setup.cmdline(':', {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = cmp.config.sources({
-		{ name = 'path' },
-	}, {
-		{
-			name = 'cmdline',
-			option = {
-				ignore_cmds = { 'Man', '!' },
-			},
-		},
-	}),
-})
---]]
-
-
---[[
-  ref:https://daniele.tech/2021/07/neovim-lsp-with-intelephense-for-php-and-wordpress-and-others/
-  require install intelephense
-  `npm install -g intelephense`
-  and require install stubs
-  `composer global require php-stubs/wordpress-globals php-stubs/wordpress-stubs php-stubs/acf-pro-stubs wpsyntex/polylang-stubs php-stubs/wp-cli-stubs`
---]]
-
 local nvim_lsp = require 'lspconfig'
 nvim_lsp.intelephense.setup({
   filetypes = {"php"},

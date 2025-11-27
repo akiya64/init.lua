@@ -12,10 +12,8 @@ require 'nvim-treesitter.configs'.setup {
     'php_only',
     'typescript',
     'tsx',
-    'toml',
     'json',
     'yaml',
-    'css',
     'html',
   },
   autotag = {

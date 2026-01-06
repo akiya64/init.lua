@@ -1,5 +1,6 @@
 -- LSP Sever management
 require('mason').setup()
+require('mason-lspconfig').setup()
 
 -- Reference highlight
 vim.cmd([[
@@ -80,75 +81,79 @@ cmp.setup({
 	},
 })
 
--- for Language --
--- astro --
-local lspconfig = require('lspconfig')
 
-lspconfig.astro.setup({
-  filetypes = { 'astro', 'typescript' },
+
+-- for Languages --
+
+-- astro --
+vim.lsp.config['astro'] = {
+  filetypes = { 'astro' },
   init_options = {
     typescript = {
       tsdk = vim.fs.normalize('~/AppData/Local/nvim-data/mason/packages/typescript-language-server/node_modules/typescript/lib/')
     }
   }
-})
+}
 
 -- php --
-local nvim_lsp = require 'lspconfig'
-lspconfig.intelephense.setup({
-  filetypes = {"php"},
+vim.lsp.config['php'] = {
+  filetypes = {'php'},
   capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
-	settings = {
-		intelephense = {
-			stubs = {
-                "bcmath",
-                "bz2",
-                "Core",
-                "curl",
-                "date",
-                "dom",
-                "fileinfo",
-                "filter",
-                "gd",
-                "gettext",
-                "hash",
-                "iconv",
-                "imap",
-                "intl",
-                "json",
-                "libxml",
-                "mbstring",
-                "mcrypt",
-                "mysql",
-                "mysqli",
-                "password",
-                "pcntl",
-                "pcre",
-                "PDO",
-                "pdo_mysql",
-                "Phar",
-                "readline",
-                "regex",
-                "session",
-                "SimpleXML",
-                "sockets",
-                "sodium",
-                "standard",
-                "superglobals",
-                "tokenizer",
-                "xml",
-                "xdebug",
-                "xmlreader",
-                "xmlwriter",
-                "yaml",
-                "zip",
-                "zlib",
-				"wordpress",
-				"acf-pro",
-				"wordpress-globals",
-				"wp-cli",
-				"polylang"
-			},
-		};
-	}
-});
+    settings = {
+      intelephense = {
+        stubs = {
+          'bcmath',
+          'bz2',
+          'Core',
+          'curl',
+          'date',
+          'dom',
+          'fileinfo',
+          'filter',
+          'gd',
+          'gettext',
+          'hash',
+          'iconv',
+          'imap',
+          'intl',
+          'json',
+          'libxml',
+          'mbstring',
+          'mcrypt',
+          'mysql',
+          'mysqli',
+          'password',
+          'pcntl',
+          'pcre',
+          'PDO',
+          'pdo_mysql',
+          'Phar',
+          'readline',
+          'regex',
+          'session',
+          'SimpleXML',
+          'sockets',
+          'sodium',
+          'standard',
+          'superglobals',
+          'tokenizer',
+          'xml',
+          'xdebug',
+          'xmlreader',
+          'xmlwriter',
+          'yaml',
+          'zip',
+          'zlib',
+          'wordpress',
+          'wordpress-globals',
+          'wp-cli',
+          'polylang',
+        }
+      }
+    }
+  }
+
+vim.lsp.config['ts'] = {
+  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' }
+}
+

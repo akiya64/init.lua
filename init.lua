@@ -1,7 +1,7 @@
 vim.g.mapleader = ' '
 
 require('options')
-require('plugins')
+require('plugin_manager')
 
 require('colemak')
 require('keymap')
@@ -49,3 +49,4 @@ vim.api.nvim_create_user_command('ShowRootHighlightUnderCursor', function()
 	local id = vim.fn.synID(vim.fn.line("."), vim.fn.col("."), 0)
 	findRoot(id, {})
 end, {})
+

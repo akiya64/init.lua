@@ -1,62 +1,61 @@
 return{
-	{
-	-- common
-	'nvim-lua/plenary.nvim',
-	'nvim-lua/popup.nvim',
-	'nvim-telescope/telescope.nvim',
-	'Editorconfig/editorconfig-vim',
+  {
+  -- common
+  'nvim-lua/plenary.nvim',
+  'nvim-lua/popup.nvim',
+  --'nvim-telescope/telescope.nvim',
+  'Editorconfig/editorconfig-vim',
 
-	-- appearance
-	'nvim-lualine/lualine.nvim',
-	'nvim-tree/nvim-web-devicons',
+  -- appearance
+  'nvim-lualine/lualine.nvim',
+  'nvim-tree/nvim-web-devicons',
 
-	{'lewis6991/gitsigns.nvim',
-		config = function()
-			require('gitsigns').setup()
-		end
-	},
+  {'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  },
 
-	-- highlight
-	'akiya64/soifon',
+  -- highlight
+  'akiya64/soifon',
 
-	{ 'nvim-treesitter/nvim-treesitter', branch = "main" },
-	'nvim-treesitter/playground',
+  { 'nvim-treesitter/nvim-treesitter', branch = "main" },
 
-	'kloppster/Wordpress-Vim-Syntax',
+  'kloppster/Wordpress-Vim-Syntax',
 
-	-- filer
-	'obaland/vfiler.vim',
-	'obaland/vfiler-column-devicons',
+  -- filer
+  'obaland/vfiler.vim',
+  'obaland/vfiler-column-devicons',
 
-	-- formatter
-	'wesleimp/stylua.nvim',
+  -- formatter
+  'wesleimp/stylua.nvim',
 
-	-- lint
-	'mfussenegger/nvim-lint',
+  -- lint
+  'mfussenegger/nvim-lint',
 
-	-- lsp
-	'neovim/nvim-lspconfig',
-	'williamboman/mason.nvim',
-	'williamboman/mason-lspconfig.nvim',
+  -- lsp
+  'neovim/nvim-lspconfig',
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
 
-	-- completion
-	'hrsh7th/nvim-cmp',
-	'hrsh7th/cmp-nvim-lsp',
-	'hrsh7th/vim-vsnip',
-	'hrsh7th/cmp-path',
-	'hrsh7th/cmp-buffer',
-	'hrsh7th/cmp-cmdline',
-	'uga-rosa/cmp-dictionary',
-	'onsails/lspkind.nvim',
+  -- completion
+  'hrsh7th/nvim-cmp',
+  'hrsh7th/cmp-nvim-lsp',
+  'hrsh7th/vim-vsnip',
+  'hrsh7th/cmp-path',
+  'hrsh7th/cmp-buffer',
+  'hrsh7th/cmp-cmdline',
+  'uga-rosa/cmp-dictionary',
+  'onsails/lspkind.nvim',
 
-	{
-		'windwp/nvim-autopairs',
-		config = function()
-			require('nvim-autopairs').setup()
-		end,
-	},
-	
-	{
+  {
+    'windwp/nvim-autopairs',
+    config = function()
+      require('nvim-autopairs').setup()
+    end,
+  },
+  
+  {
   "mhartington/formatter.nvim",
   config = function()
     require("formatter").setup({
@@ -69,7 +68,7 @@ return{
       },
     })
   end,
-	},
+  },
 
-	'lilydjwg/colorizer',
+  'lilydjwg/colorizer',
 }}
